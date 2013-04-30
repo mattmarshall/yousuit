@@ -25,6 +25,7 @@ function updateSetting2() {
 $(document).ready(
 	function() {
 		$('div.bss-selectable').click(updateSetting2);
+        $('#priority').buttonset();
 	}
 );
 </script>
@@ -32,19 +33,11 @@ $(document).ready(
   <div class="ui-widget bsw-widget">
     <div class="ui-widget-content ui-corner-all">
       <h6 data-section="priority" class="ui-widget-header ui-corner-top" style="margin:2px; text-align:center">The most important thing to me is...</h6>
-      <div style="margin:2px;text-align:center">
-        <label style="display:inline">Avoid tan lines
-          <input id="radio1" name="radio" type="radio" />
-        </label>
-        <label style="display:inline">Accentuate my curves
-          <input id="radio2" name="radio" type="radio" />
-        </label>
-        <label style="display:inline">Avoid dig-ins
-          <input id="radio3" name="radio" type="radio" />
-        </label>
-        <label style="display:inline">Flatten my tummy
-          <input id="radio4" name="radio" type="radio" />
-        </label>
+      <div id="priority" style="margin:2px;text-align:center">
+      <input id="radio1" name="radio" type="radio" /><label for="radio1">Avoid tan lines</label>
+      <input id="radio2" name="radio" type="radio" /><label for="radio2">Accentuate my curves</label>
+      <input id="radio3" name="radio" type="radio" /><label for="radio3">Avoid dig-ins</label>
+      <input id="radio4" name="radio" type="radio" /><label for="radio4">Flatten my tummy</label>            
       </div>
     </div>
   </div>

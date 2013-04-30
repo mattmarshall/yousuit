@@ -1,7 +1,16 @@
 {% extends 'substep.html' %}
 
 {% block substep-main %}
-<center><h3>Coming Soon</h3></center>
-<h5>Current Preferences</h5>
-{{ shopper }}
+<div class="ui-widget">
+    <h4 class="ui-widget-header ui-corner-top">Please Sign Up</h4>
+    <p class="ui-state-highlight" style="padding: 5px">We've found plenty of matches for you.
+    Please sign up so we can keep you up to date on new styles.</p>
+    <table>
+        <tr><td>First Name</td><td><input type="text" /></td></tr>
+        <tr><td>Last Name</td><td><input type="text" /></td></tr>
+        <tr><td>Email Address</td><td><input type="text" /></td></tr>
+    </table>
+    <h5>Current Preferences</h5>
+    <pre>{{ shopper }}</pre>
+</div>
 {% endblock %}

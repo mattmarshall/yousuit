@@ -16,6 +16,7 @@ function setValue(step, key, value) {
 }
 
 $(document).ready(function() {
+    $('#body-style').buttonset();
     $("#weight-slider").slider({
 							   value: 110,
 							   min: 75,
@@ -71,22 +72,12 @@ $(document).ready(function() {
 <div class="ui-widget bsw-widget" style="margin-top:10px">
   <div class="ui-widget-content ui-corner-all">
     <h6 class="ui-widget-header ui-corner-top" style="margin:2px; text-align:center">I think of myself as...</h6>
-    <div style="margin:2px;text-align:center">
-      <label style="display:inline">petite
-        <input type="radio" name="body-style" value="1" />
-      </label>
-      <label style="display:inline">curvy
-        <input type="radio" name="body-style" value="1" />
-      </label>
-      <label style="display:inline">athletic
-        <input type="radio" name="body-style" value="1" />
-      </label>
-      <label style="display:inline">tall &amp; thin
-        <input type="radio" name="body-style" value="1" />
-      </label>
-      <label style="display:inline">none of these
-        <input type="radio" name="body-style" value="1" />
-      </label>
+    <div id="body-style" style="margin:2px;text-align:center">
+      <input id="radio1" type="radio" name="body-style" value="1" /><label for="radio1">petite</label>
+      <input id="radio2" type="radio" name="body-style" value="2" /><label for="radio2">curvy</label>
+      <input id="radio3" type="radio" name="body-style" value="3" /><label for="radio3">athletic</label>
+      <input id="radio4" type="radio" name="body-style" value="4" /><label for="radio4">tall &amp; thin</label>
+      <input id="radio5" type="radio" name="body-style" value="5" /><label for="radio5">none of these</label>
     </div>
   </div>
 </div>

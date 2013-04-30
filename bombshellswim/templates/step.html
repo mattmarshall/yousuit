@@ -33,7 +33,7 @@ function updateSetting() {
 		data: data,
 		success: function(result) {
 			console.log('Saved preference');
-			console.log(result);
+			//console.log(result);
 		}
 	});
 	console.log({ section: section, value: value});
@@ -60,8 +60,12 @@ function updateDivWithStep(step) {
 		   type: "GET",
 		   url: '/shop/substep/' + step.step + step.substep,
 		   success: function(data) {
-			   $('#substep-contain').html(data);
-			}
+            try {
+                $('#substep-contain').html(data);
+            } catch (err) {
+                console.log(err);
+            }
+		}
 	});
 }
 

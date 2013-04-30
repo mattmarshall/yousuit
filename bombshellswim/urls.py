@@ -3,7 +3,7 @@ from django.views.generic import TemplateView, RedirectView
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.contrib.auth.views import login, password_change, password_change_done
-from bombshellswim.shopper.views import set_value, customize, substep
+from shopper.views import set_value, customize, substep
 
 admin.autodiscover()
 

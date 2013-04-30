@@ -1,0 +1,66 @@
+{% extends 'substep.html' %}
+{% block substep-main %}
+<script type="text/javascript">
+	var current = eval("{{ shopper.1b }}");
+	$(document).ready(function(){
+		$('div#step1b div.bsw-widget div.btn').click(updateSetting);
+		$('div#step1b div.bsw-widget div.btn').each(function() {
+		  var section = $('h6:first-child', $(this).parents('div.ui-widget-content')).data('section');
+		  var thisVal = $(this).data('value');
+		  $(this).removeClass('btn-active');
+		  if (val == '') {
+			  $(this).addClass('btn-active');
+		  }
+		});
+	});
+</script>
+<h3 class="ui-widget">Please describe the following:</h3>
+<div id="step1b" class="bsw-step-container" data-step="1b">
+  <div class="ui-widget bsw-widget" style="display: inline-block; vertical-align: top">
+    <div class="ui-widget-content ui-corner-all">
+      <h6 data-section="shoulders" class="ui-widget-header ui-corner-top" style="margin:2px; text-align:center">Shoulders</h6>
+      <img src="/static/images/Shoulders1.jpg" />
+      <div data-value="narrow" class="btn" style="display:block;margin:5px">Narrow</div>
+      <div data-value="average" class="btn" style="display:block;margin:5px">Average</div>
+      <div data-value="broad" class="btn" style="display:block;margin:5px">Broad</div>
+    </div>
+  </div>
+  <div class="ui-widget bsw-widget" style="display: inline-block; vertical-align: top">
+    <div class="ui-widget-content ui-corner-all">
+      <h6 data-section="bust" class="ui-widget-header ui-corner-top" style="margin:2px; text-align:center">Bust</h6>
+      <img src="/static/images/Bust2.jpg" />
+      <div data-value="flat" class="btn" style="display:block;margin:5px">Flat</div>
+      <div data-value="small" class="btn" style="display:block;margin:5px">Small</div>
+      <div data-value="average" class="btn" style="display:block;margin:5px">Average</div>
+      <div data-value="well-endowed" class="btn" style="display:block;margin:5px">Well-endowed</div>
+    </div>
+  </div>
+  <div class="ui-widget bsw-widget" style="display: inline-block; vertical-align: top">
+    <div class="ui-widget-content ui-corner-all">
+      <h6 data-section="torso" class="ui-widget-header ui-corner-top" style="margin:2px; text-align:center">Torso</h6>
+      <img src="/static/images/Torso2.jpg" />
+      <div data-value="short" class="btn" style="display:block;margin:5px">Short</div>
+      <div data-value="average" class="btn" style="display:block;margin:5px">Average</div>
+      <div data-value="long" class="btn" style="display:block;margin:5px">Long</div>
+    </div>
+  </div>
+  <div class="ui-widget bsw-widget" style="display: inline-block; vertical-align: top">
+    <div class="ui-widget-content ui-corner-all">
+      <h6 data-section="waist" class="ui-widget-header ui-corner-top" style="margin:2px; text-align:center">Waist</h6>
+      <img src="/static/images/Waist2.jpg" />
+      <div data-value="narrow" class="btn" style="display:block;margin:5px">Narrow</div>
+      <div data-value="average" class="btn" style="display:block;margin:5px">Average</div>
+      <div data-value="full" class="btn" style="display:block;margin:5px">Full</div>
+    </div>
+  </div>
+  <div class="ui-widget bsw-widget" style="display: inline-block; vertical-align: top">
+    <div class="ui-widget-content ui-corner-all">
+      <h6 data-section="hips" class="ui-widget-header ui-corner-tl ui-corner-tr" style="margin:2px; text-align:center">Hips</h6>
+      <img src="/static/images/Hips2.jpg" />
+      <div data-value="narrow" class="btn" style="display:block;margin:5px">Narrow</div>
+      <div data-value="average" class="btn" style="display:block;margin:5px">Average</div>
+      <div data-value="curvaceous" class="btn" style="display:block;margin:5px">Curvaceous</div>
+    </div>
+  </div>
+</div>
+{% endblock %}

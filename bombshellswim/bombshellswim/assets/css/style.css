@@ -1,0 +1,447 @@
+/*
+Theme Name:         zxz
+Theme URI:          vinhzxz.com
+Description:        responsive theme
+Version:            2.0
+Author:             Vinh zxz
+
+*/
+
+@import "bootstrap.css";
+@import "responsive.css";
+body{
+	font-family: "Palatino Linotype", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.nav > li {
+	float: none !important;
+	display: inline-block;
+	vertical-align: top;
+}
+#main_menu{
+	padding: 5px 0;
+	border-top: 1px dashed #dbbd82;
+	border-bottom: 1px dashed #dbbd82;
+	margin-top: 20px;
+}
+#navfoot li a{
+	font-size: 13px;
+	font-weight: normal !important;
+	color: #FFF;
+	text-transform: uppercase;
+}
+
+#navmain li a{
+	font-size: 17px;
+	font-weight: normal !important;
+	color: #725a2b;
+	text-transform: uppercase;
+}
+#navmain .nav-pills > .active > a, .nav-pills > .active > a:hover, .nav-pills > .active > a:focus {
+	color: #725a2b !important;
+	background-color: #d9d8d9 !important;
+}
+#navmain .nav-pills li a:hover,.nav-pills li:hover a{
+	background-color: #d9d8d9 !important;
+}
+#navfoot .nav-pills li a:hover,.nav-pills li:hover a{
+	background-color:#909090 !important;
+}
+.index_left{
+	padding-left: 7%;
+	padding-top: 6%;
+	position:	absolute;
+	left: 70px;
+	top: 30px;
+}
+.index_left h2{
+	font-style: italic;
+	font-size:29px !important;
+	text-transform: lowercase;
+}
+.index_left p{
+	line-height: 25px;
+font-size: 14px;
+margin-bottom: 40px !important;
+margin-top: 35px;
+}
+.index_right{
+	float:right !important;
+}
+.navmain{
+	width: 80%;
+margin: 0 auto;
+}
+.main{
+	position:relative;
+}
+.gt{
+	background:#e3633d !important;
+	color:white !important;
+	padding: 8px 15px !important;
+	margin-right: 100px;
+	margin-right: 90px;
+text-transform: uppercase;
+}
+.hiw{
+	background: #58a5b8 !important;
+	color:white !important;
+	padding: 8px 15px !important;	
+text-transform: uppercase;
+}
+footer{
+	background:#909090;
+	padding-left:12%;
+}
+footer .s5r{
+	float:right;	
+	padding-right: 10%;
+text-align: right;
+}
+footer .s5r a{
+	margin-left:20px;
+}
+footer{ 
+	color: #fff !important; 
+	padding-bottom:40px;
+}	
+header{
+	padding-top:20px;
+}
+footer .s5r p{	
+	margin-top: 10px !important;
+	font-size: 13px !important;
+}
+.call{
+	background:url(/static/images/phone.png) 0 0 no-repeat;
+	padding-left: 35px;	
+	float:left;
+	margin-right:105px;
+}
+.cont{
+	background: url(/static/images/mail.png) 0 5px no-repeat;
+	padding-left: 58px;
+	float:left;
+}
+.h2bot{
+	text-transform: capitalize;
+	font-style: italic;
+	font-size: 25px;
+	margin: 40px 0;
+	color:#bfbfbf;
+}
+/*step */
+.progress-bar .steps .step.selected .dot {
+	background: #f78c3d !important;
+	box-shadow: 0px 0px 0px 4px #f08638,0px 0px 1px 5px #f08638 !important;
+	-webkit-box-shadow: 0px 0px 0px 4px #f08638,0px 0px 1px 5px #f08638 !important;
+	-moz-box-shadow: 0px 0px 0px 4px #f08638,0px 0px 1px 5px #f08638 !important;
+	-o-box-shadow: 0px 0px 0px 4px #f08638,0px 0px 1px 5px #f08638 !important;
+	-ms-box-shadow: 0px 0px 0px 4px #f08638,0px 0px 1px 5px #f08638 !important;
+	border: 2px solid #fff !important;
+	color: white !important;
+
+}
+.progress-bar .steps .step .dot {
+font-weight: bold;
+font-size: 17px;
+-webkit-border-radius: 20px !important;
+-moz-border-radius: 20px !important	;
+-ms-border-radius: 20px !important;
+-o-border-radius: 20px !important;
+border-radius: 20px !important;
+background: #f1f1f1 !important;
+border: 2px solid #cecece !important;
+height: 20px !important;
+margin: 0px auto 10px !important;
+margin-top:15px !important;
+width: 20px !important;
+box-shadow: 0px 0px 0px 4px #f1f1f1,0px 0px 1px 5px #cecece !important;
+-webkit-box-shadow: 0px 0px 0px 4px #f1f1f1,0px 0px 1px 5px #cecece !important;
+-moz-box-shadow: 0px 0px 0px 4px #f1f1f1,0px 0px 1px 5px #cecece !important;
+-o-box-shadow: 0px 0px 0px 4px #f1f1f1,0px 0px 1px 5px #cecece !important;
+-ms-box-shadow: 0px 0px 0px 4px #f1f1f1,0px 0px 1px 5px #cecece !important;
+}
+.progress-bar .bar {
+background: url(/static/images/prb.png) top left repeat-x !important;
+height: 10px !important;
+margin: 0 auto !important;
+position: relative !important;
+width: 445px !important;
+margin-top: 10px !important;
+padding-top: -24px !important;
+top: 37px !important;
+}
+.progress-bar {
+	width: 570px;
+margin-left: auto;
+margin-right: auto;
+margin-top:60px;
+margin-bottom: 0px !important;
+}
+.progress-bar .steps .step{
+	width: 207px !important;
+}
+#progress-step-1{
+	margin-left: -25px !important;
+}
+.progress-desc{
+	font-weight:bold;
+	font-size: 15px;
+}
+#user_height_1{
+	width: 75px !important;
+margin-right: 25px !important;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+#step-page-1 input[type=number],
+#step-page-1 input[type=text]
+{
+	-webkit-box-shadow: 1px 1px 10px 1px !important; 
+	/*box-shadow: 1px 1px 10px 1px !important; */
+	-moz-box-shadow: 1px 1px 10px 1px !important; 
+	-o-box-shadow: 1px 1px 10px 1px !important; 
+	-ms-box-shadow: 1px 1px 10px 1px !important; 
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#cecece), to(#f2f2f2)) !important;
+	background: -webkit-linear-gradient(top, #cecece, #f2f2f2) !important;  
+	background: -moz-linear-gradient(top, #cecece, #f2f2f2) !important;  
+	background: -ms-linear-gradient(top, #cecece, #f2f2f2) !important; 
+	background: -o-linear-gradient(top, #cecece, #f2f2f2) !important;
+	outline: 7px solid #e1e1e0 !important;
+	border: 2px solid #dadada !important;
+	width:175px !important;
+	padding-top:0px !important;
+	padding-bottom:0px !important;
+}
+body form fieldset label{
+	font-size:15px !important;
+}
+.start .question label {
+	margin-bottom:20px !important;
+}
+button.btn.btn-large{
+	margin-bottom:30px;
+	min-width: 160px;
+}
+.btactive{    
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff4e3), to(#ffdba4)) !important;
+	background: -webkit-linear-gradient(top, #fff4e3, #ffdba4) !important;  
+	background: -moz-linear-gradient(top, #fff4e3, #ffdba4) !important;  
+	background: -ms-linear-gradient(top, #fff4e3, #ffdba4) !important; 
+	background: -o-linear-gradient(top, #fff4e3, #ffdba4) !important;
+    -webkit-box-shadow: 1px 1px 10px 3px #ffe9c5 !important;
+	box-shadow:  1px 1px 10px 3px #ffe9c5 !important;
+	-moz-box-shadow:  1px 1px 10px 3px #ffe9c5 !important;
+	-o-box-shadow:  1px 1px 10px 3px #ffe9c5 !important;
+	-ms-box-shadow:  1px 1px 10px 3px #ffe9c5 !important;
+    border: 2px solid #ffb239 !important;
+}
+.fleft{
+	float:left
+}
+.fright{
+	float:right
+}
+.buynow{
+	text-transform:uppercase;
+	color:#fff !important;
+}
+.continue,
+.before_continue,
+.back,.buynow,
+.submit_button{
+	width: 130px !important;
+	text-transform: uppercase !important;
+	background: #e3633d !important;
+	text-align:center !important;
+}
+.continue:hover,
+.before_continue:hover,
+.back:hover,.buynow:hover,
+.submit_button:hover{
+	background: #e3633d !important;
+}
+.back{
+	margin-left:100px;
+}
+.dmain{
+	padding-left:10%;
+	padding-bottom:100px;
+}
+.contact_address{
+	margin-bottom:50px;
+}
+.contact_address h4{
+	text-transform:uppercase;
+	margin-top:68px;
+}
+.btsend ,.btsend:hover{	
+	color:#FFF !important;
+}
+.span12_5 .span2{
+	width:20% !important;
+	margin-left:0px !important;
+	margin-right:0px !important;
+}
+.bdleft{
+	border-left: 1px dashed #e6e6e6;
+}
+.checkbox{
+	margin-bottom:5px !important;
+	color:#f7a071 !important;
+}
+.inlinecheck{
+	margin-top:-30px !important;
+}
+.imgr img{
+	border: 2px solid #d3d3d3;
+	padding: 2px;
+	cursor:pointer;
+}
+.imgactive{
+	border: 2px solid #f7a071 !important;
+}
+.rdimg{
+	margin: 0 auto !important;
+	float: none !important;
+	margin-top:5px !important;
+}
+.resimg{
+	margin:20px 0 !important;
+}
+.detail_img{
+	width: 250px;
+	height: 300px;
+}
+.errors{
+	color:red;
+	font-size:20px;
+}
+.resimg img{
+	padding:2px;
+	border:1px solid #d3d3d3;	
+	margin:10px 0 !important;
+	width: 250px;
+	height: 300px;
+	/*width:170px;
+	height:230px;*/
+}
+.prelative{
+	position:relative;
+}
+.hide{
+	display:none;
+}
+.detail{
+	margin-left: auto !important;
+	margin-right:auto !important;
+	float: none !important;
+}
+.detail img{
+	min-width:200px !important;
+	margin-bottom:40px;
+}
+.body_types button{
+	text-transform:lowercase;
+}
+
+/* how it works page */
+.content-howitworks {
+    text-align: center;
+}
+.content-article-howitworks {
+    float: left;
+    margin: 0px 15px;
+    text-align: center;
+    width: 280px;
+}
+.content-article-howitworks-title h3 {
+    font-size: 18px;
+    font-weight: normal;
+}
+.content-article-howitworks .textwidget {
+    font-size: 12px;
+    padding-bottom: 30px;
+}
+.content-article-howitworks-title {
+    margin-top: -20px;
+}
+.content-article-howitworks:nth-child(5) {
+    border-left: 1px dashed #FF9F3F;
+    border-right: 1px dashed #FF9F3F;
+    padding: 0 45px;
+    width: 280px;
+}
+.content-article-howitworks:nth-child(2) {
+    padding: 0 40px;
+}
+.content-article-howitworks:nth-child(1) .content-article-howitworks-title h3, .content-article-howitworks:nth-child(2) .content-article-howitworks-title  h3,.content-article-howitworks:nth-child(3) .content-article-howitworks-title  h3{
+	background: none repeat scroll 0 0 #A8E9EF;
+    border-radius: 100px 100px 100px 100px;
+    line-height: 30px;
+    margin: 25px 0 -10px 129px;
+    padding: 0;
+    width: 30px;
+}
+.content-article-howitworks:nth-child(7)  h3{
+	display:none;
+}
+.content-article-howitworks:nth-child(7) {
+	margin-left: 365px;
+    margin-top: 20px;
+
+}
+.content-article-howitworks:nth-child(7) .textwidget a {
+    background: none repeat scroll 0 0 #A8E9EF;
+    border-radius: 5px 5px 5px 5px;
+    padding: 7px 55px;
+	color: #333333;
+    font-size: 16px;
+	text-decoration: none;
+}
+
+/* FAQs page */
+
+.content-article-fqas .textwidget {
+    margin-left: 39px;
+    margin-top: -10px;
+}
+
+.content-article-fqas h3 {
+    font-size: 17px;
+    font-weight: normal;
+}
+.faq-title  h3 {
+    font-size: 21px;
+    margin-bottom: -10px;
+}
+
+
+
+
+
+
+
+div.step {
+	display: inline-block;
+	margin-right: 25px;
+}
+
+div.step span {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	border: 1px solid black;
+	line-height: 25px;
+}
+
+.bss-active {
+	font-weight: bold;
+	background-color: orange;
+	color: navy;
+}

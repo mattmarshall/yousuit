@@ -1,0 +1,93 @@
+{% extends 'substep.html' %}
+{% block substep-main %}
+<script type="text/javascript">
+function setValue(step, key, value) {
+		var data = JSON.stringify({ step: step, section: key, value: value });
+		$.ajax({
+		url: '/shop/set_value',
+		type: 'POST',
+		contentType: 'application/json',
+		data: data,
+		success: function(result) {
+			console.log('Saved preference');
+			console.log(result);
+		}
+	})
+}
+
+$(document).ready(function() {
+    $("#weight-slider").slider({
+							   value: 110,
+							   min: 75,
+							   max: 250,
+							   step: 1,
+							   slide: function(evt, ui) {
+								   $('#weight').text(ui.value);
+							   }
+							   });
+	$("#height-slider").slider({
+							   value: 5 * 12 + 4, // 5' 4"
+							   min: 4 * 12, // 4'
+							   max: 6 * 12 + 6,
+							   step: 1,
+							   slide: function(evt, ui) {
+								   		var feet = Math.floor(ui.value / 12);
+										var inches = ui.value % 12;
+								   $('#feet').text(feet);
+								   $('#inches').text(inches);
+							   }
+							   });
+	$('#next-step').click(function(){
+		var weightValue = $('#weight-slider').slider('option', 'value');
+		var heightValue = $('#height-slider').slider('option', 'value');
+		setValue('1a', 'weight', weightValue);
+		setValue('1a', 'inches', heightValue);
+	});
+});
+</script>
+<h3 class="ui-widget">Please describe the following:</h3>
+<div class="ui-widget bsw-widget" style="width:410px; display:inline-block;vertical-align:top">
+  <div class="ui-widget-content ui-corner-all">
+    <h6 class="ui-widget-header ui-corner-top" style="margin:2px; text-align:center">Weight</h6>
+    <div style="display:inline-block; width: 310px">
+    	<div class="bss-slider" style="margin:10px" id="weight-slider"></div>
+    </div>
+    <div style="display:inline-block;vertical-align:top;padding-top:5px">
+    	<span id="weight">110</span><span> pounds</span>
+    </div>
+  </div>
+</div>
+<div class="ui-widget bsw-widget" style="width:410px;display:inline-block;vertical-align:top">
+  <div class="ui-widget-content ui-corner-all">
+    <h6 class="ui-widget-header ui-corner-top" style="margin:2px; text-align:center">Height</h6>
+    <div style="display:inline-block; width: 310px">
+    	<div class="bss-slider" style="margin:10px" id="height-slider"></div>
+    </div>
+    <div style="display:inline-block;vertical-align:top;padding-top:5px">
+    	<span id="feet">5</span><span>'&nbsp;</span><span id="inches">4</span><span>"</span>
+    </div>
+  </div>
+</div>
+<div class="ui-widget bsw-widget" style="margin-top:10px">
+  <div class="ui-widget-content ui-corner-all">
+    <h6 class="ui-widget-header ui-corner-top" style="margin:2px; text-align:center">I think of myself as...</h6>
+    <div style="margin:2px;text-align:center">
+      <label style="display:inline">petite
+        <input type="radio" name="body-style" value="1" />
+      </label>
+      <label style="display:inline">curvy
+        <input type="radio" name="body-style" value="1" />
+      </label>
+      <label style="display:inline">athletic
+        <input type="radio" name="body-style" value="1" />
+      </label>
+      <label style="display:inline">tall &amp; thin
+        <input type="radio" name="body-style" value="1" />
+      </label>
+      <label style="display:inline">none of these
+        <input type="radio" name="body-style" value="1" />
+      </label>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'substep.html' %}
+{% block substep-main %}
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('div#step3a div.bsw-widget div.btn').click(updateSetting);
+	});
+</script>
+<h3 class="ui-widget">Please describe your needs for the following:</h3>
+<div id="step3a" class="bsw-step-container" data-step="3a">
+  <div class="ui-widget bsw-widget" style="display: inline-block; vertical-align: top">
+    <div class="ui-widget-content ui-corner-all">
+      <h6 data-section="shoulders" class="ui-widget-header ui-corner-top" style="margin:2px; text-align:center">Shoulders</h6>
+      <img src="/static/images/Shoulders1.jpg" />
+      <div data-value="broaden" class="btn" style="display:block;margin:5px">Broaden</div>
+      <div data-value="minimize" class="btn" style="display:block;margin:5px">Minimize</div>
+      <div data-value="nothing" class="btn" style="display:block;margin:5px">Nothing</div>
+    </div>
+  </div>
+  <div class="ui-widget bsw-widget" style="display: inline-block; vertical-align: top">
+    <div class="ui-widget-content ui-corner-all">
+      <h6 data-section="bust" class="ui-widget-header ui-corner-top" style="margin:2px; text-align:center">Bust</h6>
+      <img src="/static/images/Bust2.jpg" />
+      <div data-value="accentuate" class="btn" style="display:block;margin:5px">Accentuate</div>
+      <div data-value="de-emphasize" class="btn" style="display:block;margin:5px">De-emphasize</div>
+      <div data-value="nothing" class="btn" style="display:block;margin:5px">Nothing</div>
+    </div>
+  </div>
+  <div class="ui-widget bsw-widget" style="display: inline-block; vertical-align: top">
+    <div class="ui-widget-content ui-corner-all">
+      <h6 data-section="torso" class="ui-widget-header ui-corner-top" style="margin:2px; text-align:center">Torso</h6>
+      <img src="/static/images/Torso2.jpg" />
+      <div data-value="elongate" class="btn" style="display:block;margin:5px">Elongate</div>
+      <div data-value="shorten" class="btn" style="display:block;margin:5px">Shorten</div>
+      <div data-value="nothing" class="btn" style="display:block;margin:5px">Nothing</div>
+    </div>
+  </div>
+  <div class="ui-widget bsw-widget" style="display: inline-block; vertical-align: top">
+    <div class="ui-widget-content ui-corner-all">
+      <h6 data-section="waist" class="ui-widget-header ui-corner-top" style="margin:2px; text-align:center">Waist</h6>
+      <img src="/static/images/Waist2.jpg" />
+      <div data-value="contain" class="btn" style="display:block;margin:5px">Contain</div>
+      <div data-value="nothing" class="btn" style="display:block;margin:5px">Nothing</div>
+    </div>
+  </div>
+  <div class="ui-widget bsw-widget" style="display: inline-block; vertical-align: top">
+    <div class="ui-widget-content ui-corner-all">
+      <h6 data-section="hips" class="ui-widget-header ui-corner-tl ui-corner-tr" style="margin:2px; text-align:center">Hips</h6>
+      <img src="/static/images/Hips2.jpg" />
+      <div data-value="accentuate" class="btn" style="display:block;margin:5px">Accentuate</div>
+      <div data-value="minimize" class="btn" style="display:block;margin:5px">Minimize</div>
+      <div data-value="nothing" class="btn" style="display:block;margin:5px">Nothing</div>
+    </div>
+  </div>
+</div>
+{% endblock %}

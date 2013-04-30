@@ -1,0 +1,90 @@
+{% extends 'substep.html' %}
+{% block substep-main %}
+<script type="text/javascript">
+function updateSetting2() {
+	$(this).siblings('div.bss-selectable').removeClass('bss-active');
+	$(this).addClass('bss-active');
+	var step = $(this).parents('div.bsw-step-container').data('step');
+	var section = $('h6:first-child', $(this).parents('div.ui-widget-content')).data('section');
+	var value = $(this).data('value');
+	console.log('Click');
+	var data = JSON.stringify({ step: step, section: section, value: value });
+	console.log(data);
+	$.ajax({
+		url: '/shop/set_value',
+		type: 'POST',
+		contentType: 'application/json',
+		data: data,
+		success: function(result) {
+			console.log('Saved preference');
+			console.log(result);
+		}
+	});
+	console.log({ section: section, value: value});
+}
+$(document).ready(
+	function() {
+		$('div.bss-selectable').click(updateSetting2);
+	}
+);
+</script>
+<div data-step="2a" class="bsw-step-container">
+  <div class="ui-widget bsw-widget">
+    <div class="ui-widget-content ui-corner-all">
+      <h6 data-section="priority" class="ui-widget-header ui-corner-top" style="margin:2px; text-align:center">The most important thing to me is...</h6>
+      <div style="margin:2px;text-align:center">
+        <label style="display:inline">Avoid tan lines
+          <input id="radio1" name="radio" type="radio" />
+        </label>
+        <label style="display:inline">Accentuate my curves
+          <input id="radio2" name="radio" type="radio" />
+        </label>
+        <label style="display:inline">Avoid dig-ins
+          <input id="radio3" name="radio" type="radio" />
+        </label>
+        <label style="display:inline">Flatten my tummy
+          <input id="radio4" name="radio" type="radio" />
+        </label>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:10px">
+    <div class="ui-widget bsw-widget" style="float: left">
+      <div class="ui-widget-content ui-corner-all">
+        <h6 data-section="activity" class="ui-widget-header ui-corner-top" style="margin:2px; text-align:center">I will be...</h6>
+        <div style="margin:2px">
+          <div class="bss-selectable" data-value="tanning" style="display:inline-block"> <img src="/static/images/basking.png" />
+            <div>Tanning</div>
+          </div>
+          <div class="bss-selectable" data-value="swimming" style="display:inline-block"> <img src="/static/images/swimming.png" />
+            <div>Swimming</div>
+          </div>
+          <div class="bss-selectable" data-value="exercising" style="display:inline-block"> <img src="/static/images/sporting.png" />
+            <div>Exercising</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ui-widget bsw-widget" style="float:right">
+      <div class="ui-widget-content ui-corner-all">
+        <h6 data-section="style" class="ui-widget-header ui-corner-top" style="margin:2px; text-align:center">My style is...</h6>
+        <div style="margin:2px">
+          <div class="bss-selectable" data-value="classic" style="display:inline-block"> <img src="/static/images/classic.png" />
+            <div>Classic</div>
+          </div>
+          <div class="bss-selectable" data-value="flirty" style="display:inline-block"> <img src="/static/images/flirty.png" />
+            <div>Flirty</div>
+          </div>
+          <div class="bss-selectable" data-value="sporty" style="display:inline-block"> <img src="/static/images/sporty.png" />
+            <div>Sporty</div>
+          </div>
+          <div class="bss-selectable" data-value="sexy" style="display:inline-block"> <img src="/static/images/sexy.png" />
+            <div>Sexy</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="clear:both">&nbsp;</div>
+  </div>
+</div>
+{% endblock %}

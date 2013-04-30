@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="row-fluid main">
+  <div class="span5 index_left" >
+    <h2>Your Body. Your Style. Your Suit</h2>
+    <p> Let us take the stress out of the miserable <br>
+      process of finding a bathing suit. <br>
+      Tell us your body type, and our design experts <br>
+      will find a curated selection of swimsuits that will <br>
+      be perfect for you. </p>
+    <a href="/shop/step/1">
+    	<button class="btn gt" type="button" onClick="window.location='/'"> Get Started </button>
+    </a>
+    <a href="/how-it-works/">
+    	<button class="btn hiw" type="button" onClick="window.location='/'"> How it works </button>
+    </a>
+  </div>
+  <div class="span7 index_right"> <img src="/static/images/bg.png" /></div>
+  <div style="clear:both"></div>
+</div>
+{% endblock %}

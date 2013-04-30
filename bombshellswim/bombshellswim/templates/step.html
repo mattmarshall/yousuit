@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<script type="text/javascript">
+var steps = [
+	{ url: '1#a', step: 1, substep: 'a' },
+	{ url: '1#b', step: 1, substep: 'b' },
+	{ url: '2#a', step: 2, substep: 'a' },
+	{ url: '3#a', step: 3, substep: 'a' },
+	{ url: '3#b', step: 3, substep: 'b' }
+];
+
+var options = {
+	index: 0,
+	previous: null,
+	current: null,
+	next: null,
+};
+
+function updateSetting() {
+	$(this).siblings('div.btn').removeClass('btactive');
+	$(this).addClass('btactive');
+	var step = $(this).parents('div.bsw-step-container').data('step');
+	var section = $('h6:first-child', $(this).parents('div.ui-widget-content')).data('section');
+	var value = $(this).data('value');
+	console.log('Click');
+	var data = JSON.stringify({ step: step, section: section, value: value });
+	console.log(data);
+	$.ajax({
+		url: '/shop/set_value',
+		type: 'POST',
+		contentType: 'application/json',
+		data: data,
+		success: function(result) {
+			console.log('Saved preference');
+			console.log(result);
+		}
+	});
+	console.log({ section: section, value: value});
+}
+
+function findStep(url) {
+	for (var i = 0; i < steps.length; i++) {
+		if (steps[i].url === url) {
+			options.index = i;
+			options.previous = steps[(i - 1) % steps.length];
+			options.current = steps[i % steps.length];
+			options.next = steps[(i + 1) % steps.length];
+			return true;
+		}
+	}
+	options.index = -1;
+	options.current = null;
+	options.next = null;
+	return false;
+}
+
+function updateDivWithStep(step) {
+	$.ajax({
+		   type: "GET",
+		   url: '/shop/substep/' + step.step + step.substep,
+		   success: function(data) {
+			   $('#substep-contain').html(data);
+			}
+	});
+}
+
+function updateStep() {
+	var idx = window.location.href.lastIndexOf('/') + 1;
+	var url = window.location.href.substr(idx);
+	if (window.location.hash === '') {
+		url += '#a';
+	}
+	if (findStep(url)) {
+		updateDivWithStep(options.current);
+		$('div#steps div.step span').removeClass('bss-active');
+		var selector = 'div#steps div.step:nth-child(' + options.current.step + ') span';
+		$('div#steps div.step:nth-child(' + options.current.step + ') span').addClass('bss-active');
+	}
+}
+
+$(document).ready(function(){
+	$(window).on('hashchange', updateStep);
+	$('#next-step').click(function(){
+		window.location = '/shop/step/' + options.next.url;
+	});
+	$('#previous-step').click(function(){
+		window.location = '/shop/step/' + options.previous.url;
+	});
+	
+	updateStep();
+});
+</script>
+{% block substep-header %}
+<div>
+    <div id="steps" class="ui-widget" style="margin: 10px auto; width: 800px; text-align: center">
+      <div class="step" style="display:inline-block"><span class="ui-corner-all">1</span> Body</div>
+      <div class="step" style="display:inline-block"><span class="ui-corner-all">2</span> Style</div>
+      <div class="step" style="display:inline-block"><span class="ui-corner-all">3</span> Suit</div>
+    </div>
+</div>
+{% endblock %}
+<div id="substep-contain" style="margin: 0 auto; width: 825px; overflow:hidden"></div>
+<div class="ui-widget">
+	<div style="margin: 10px auto; width: 800px; text-align: center">
+    	<span class="btn" id="previous-step">Back</span>
+    	<span class="btn" id="next-step">Next Step</span>
+    </div>
+</div>
+{% endblock %}

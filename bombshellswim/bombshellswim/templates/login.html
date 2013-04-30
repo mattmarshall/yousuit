@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block main %}
+{%if form.errors %}
+<p> Invalid username/password combination, please try again </p>
+{% endif %}
+<div style="width:825px;margin:0 auto">
+<h2>Please Login</h2>
+<form action="{% url 'django.contrib.auth.views.login' %}" method="post">
+  {% csrf_token %}
+  <table>
+  <tr><td>{{form.username.label_tag}}</td><td>{{form.username}}</td></tr>
+  <tr><td>{{form.password.label_tag}}</td><td>{{form.password}}</td></tr>
+  <tr><td colspan="2"><input type="submit" id="submit" name="submit" value="Sign in" class="btn" /></td></tr>
+  <tr><td colspan="2"><a href="{% url 'django.contrib.auth.views.password_reset' %}" id="forgot"> forgot username/password</a>&nbsp;&nbsp;<a href="register" id="new">new user</a></td></tr>
+  </table>
+  <input type="hidden" name="next" value="{{ next }}" />
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>{% block title %}Bombshell Swim | curated swimsuits, just for you{% endblock %}</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name='robots' content='noindex,nofollow' />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="/static/css/style.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/static/css/login.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/static/css/styles.css" />
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+
+<!--
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+-->
+
+<script type="text/javascript" src="/static/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery-ui-1.8.22.custom.min.js"></script>
+
+<!--
+<script type="text/javascript" src="http://www.bombshellswim.com/wp-includes/js/jquery/jquery.js?ver=1.8.3"></script>
+<script type="text/javascript" src="http://www.bombshellswim.com/wp-content/themes/zxz/ajax-login-script.js?ver=3.5.1"></script>
+<script type="text/javascript" src="http://www.bombshellswim.com/wp-content/themes/zxz/js/bootstrap.js"></script>
+<script type='text/javascript' src='http://www.bombshellswim.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.25.0-2013.01.18'></script>
+<script type='text/javascript' src='http://www.bombshellswim.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.3.3'></script>-->
+
+<script type='text/javascript'>
+	var _wpcf7 = {"loaderUrl":"http:\/\/www.bombshellswim.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+	var ajax_login_object = {
+		"ajaxurl":        "http:\/\/www.bombshellswim.com\/wp-admin\/admin-ajax.php",
+		"redirecturl":    "http:\/\/www.bombshellswim.com",
+		"loadingmessage": "Sending user info, please wait..."
+	};
+</script>
+</head>
+<body class="home blog">
+<header class="text-center"> <img src="/static/images/logo.png" /> </header>
+<nav id="navmain" class="text-center">
+  <ul id="main_menu" class="nav nav-pills">
+    <li id="menu-item-258" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-258"><a href="/">Home</a></li>
+    <li id="menu-item-256" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-256"><a href="/about-us">About us</a></li>
+    <li id="menu-item-264" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-264"><a href="/how-it-works">How it Works</a></li>
+    <li id="menu-item-271" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-271"><a href="/faqs">FAQs</a></li>
+    <li id="menu-item-260" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-260"><a href="http://bombshellswimblog.wordpress.com">Blog</a></li>
+    <li id="menu-item-336" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-336"><a href="/login">Login</a></li>
+  </ul>
+</nav>
+{% block main %}{% endblock %}
+<footer>
+  <nav id="navfoot" class="menu-nav_menu-container">
+    <ul id="menu-nav_menu" class="nav nav-pills">
+      <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-258"><a href="/">Home</a></li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-256"><a href="/about-us">About us</a></li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-264"><a href="/how-it-works">How it Works</a></li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-271"><a href="/faqs">FAQs</a></li>
+      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-260"><a href="http://bombshellswimblog.wordpress.com">Blog</a></li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-336"><a href="/login">Login</a></li>
+    </ul>
+  </nav>
+  <div class="span5" style="padding-top:28px">
+    <p class="cont"> CONTACT <br>
+      info@bombshellswim.com </p>
+    <br style="clear:both" />
+  </div>
+  <div class="span5 s5r"> <a href=""><img src="/static/images/fb.png" /></a> <a href=""><img src="/static/images/tt.png" /></a> <a href=""><img src="/static/images/pt.png" /></a>
+    <p>Bombshell © 2013 | All Rights Reserved</p>
+  </div>
+  <br style="clear:both" />
+</footer>
+</body>
+</html>
